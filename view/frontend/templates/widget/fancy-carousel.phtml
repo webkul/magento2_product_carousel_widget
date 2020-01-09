@@ -1,0 +1,104 @@
+<?php
+/**
+ * Webkul Software.
+ *
+ * @category  Webkul
+ * @package   Webkul_ProductCarousel
+ * @author    Webkul
+ * @copyright Copyright (c) 2010-2017 Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+
+$imageurl=$block->getImageUrl();
+// echo '<pre>';
+// print_r($imageurl);
+$config=$block->getConfigure();
+
+?>
+<link rel="stylesheet" type="text/css"
+href="<?php echo $this->getViewFileUrl('Webkul_ProductCarousel::css/style.css');?>" />
+<link rel="stylesheet" type="text/css"
+href="<?php echo $this->getViewFileUrl('Webkul_ProductCarousel::css/skin.css');?>"/>
+
+<style>
+.jcarousel-skin-tango .jcarousel-container {
+    -moz-border-radius: 10px;
+	background: <?php echo $config['backgroundColor'];?>;
+    border: 1px solid #346F97;
+	max-width:1030px;
+
+}
+.jcarousel-skin-tango .jcarousel-item{
+    background-color: antiquewhite;
+}
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+    width: <?php echo $config['boxWidth'].'px';?>;
+    padding: 20px 40px;
+
+}
+.jcarousel-skin-tango .jcarousel-clip-horizontal {
+    width:  <?php echo $config['boxWidth'].'px';?>;
+    height: <?php echo $config['updateHeight'].'px'?>;
+	max-width:1030px;
+}
+.mycarousel .jcarousel-list .jcarousel-list-horizontal{
+	width:<?php echo $config['imageWidth'].'px';?>;
+	height:<?php echo $config['imageHeight'].'px'?>;
+}
+.jcarousel-skin-tango .jcarousel-item{
+	width:<?php echo $config['imageWidth'].'px';?>;
+	height: <?php echo $config['updateHeight'].'px'?>;
+}
+.jcarousel-skin-tango .jcarousel-prev-horizontal {
+	top:<?php echo $config['clicktop'].'px';?>;
+}
+.jcarousel-skin-tango .jcarousel-next-horizontal{
+	top:<?php echo $config['clicktop'].'px';?>;
+}
+img.image{
+	height:<?php echo $config['imageHeight'].'px'?>;
+	width:<?php echo $config['imageWidth'].'px';?>;
+}
+img.image:hover{
+	opacity:.7;
+}
+p{
+	text-align:center;
+    line-height: 10px;
+}
+</style>
+<div class="wrap">
+	<ul  class="mycarousel jcarousel-skin-tango" >
+		<?php foreach ($imageurl as $key=>$value) {?>
+		<li>
+		<a href="<?php echo $value['producturl'];?>">
+			<img class="image"  title="<?php echo $value['title'];?>"
+				src="<?php echo $value['imageurl'];?>"/>
+				<p><?php echo '$'.$value['price'];?></p>
+
+			</a>
+		</li>
+		<?php } ?>
+	</ul>
+</div>
+<script type="text/x-magento-init">
+	{
+	"*":{
+		"myjcarousel": {}
+		}
+	}
+</script>
+
+	<script>
+	require([
+	    "jquery",
+	    "jquery/ui",
+	    "myjcarousel"
+	], function($){
+	    $(document).ready(function() {
+			$('.mycarousel').jcarousel({
+    			wrap: 'circular'
+			});
+		});
+	})
+</script>

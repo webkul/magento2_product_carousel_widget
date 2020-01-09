@@ -1,0 +1,10 @@
+Legend
+
++ Features
+- Bugs
+
+-------------------------------- Version 2.0.0 --------------------------------------
++ Allow slick effect, no Flash needed.
++ Adjust Width and Height as per your ease.
++ Allow this extension on multiple places within a single page.
++ Allow to create multiple widgets in single page.

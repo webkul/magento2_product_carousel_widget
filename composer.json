@@ -1,0 +1,22 @@
+{
+    "name": "webkul/magento2_product_carousel_widget",
+    "description": "Webkul Magento2 Product Carousel Module",
+    "require": {
+    	"magento/module-catalog": "102.0.*",
+    	"magento/framework": "101.0.*",
+    	"magento/module-widget": "101.0.*"
+    },
+    "type": "magento2-module",
+    "version": "2.0.0",
+    "license": [
+        "proprietary"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Webkul\\ProductCarousel\\": ""
+        }
+    }
+}

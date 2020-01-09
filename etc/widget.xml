@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+	<widget id="Webkul_productcarousel" class="Webkul\ProductCarousel\Block\Widget\FancyCarousel">
+		<label translate="true">Fancy product carousel</label>
+		<description>Add a simple fancy product carousel</description>
+		<parameters>
+			<parameter name="productId" xsi:type="text" required="true" visible="true" sort_order="7" >
+				<label translate="true">Product ids</label>
+				<description translate="true">Add values with comma separation e.g 16,17,25</description>
+			</parameter>
+			<parameter name="boxWidth" xsi:type="text" required="true"  visible="true" sort_order="8" >
+				<label translate="true">Box Width</label>
+				<description translate="true">e.g 300</description>
+			</parameter>
+			<parameter name="backgroundColor" xsi:type="text"  required="true" visible="true" sort_order="9" >
+				<label translate="true">Background color</label>
+				<description translate="true">e.g black,#000 </description>
+			</parameter>
+			<parameter name="imageWidth" xsi:type="text" required="true"  visible="true" sort_order="10" >
+				<label translate="true">Image Width</label>
+				<description translate="true">e.g 75</description>
+			</parameter>
+			<parameter name="imageHeight" xsi:type="text" required="true" visible="true" sort_order="11" >
+				<label translate="true">Image Height</label>
+				<description translate="true">e.g 70</description>
+			</parameter>
+
+		</parameters>
+	</widget>
+</widgets>
