@@ -16,7 +16,7 @@ now module is properly installed
 
 #User Guide
 
-For Magento2 Product Carousel's working process follow user guide -
+For Magento2 Product Carousel's working process follow user guide - https://webkul.com/blog/magento2-product-carousel-widget/
 
 #Support
 
